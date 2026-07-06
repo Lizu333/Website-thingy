@@ -1,0 +1,576 @@
+:root {
+
+    /* Backgrounds */
+    --background: #f2dcdb;
+    --surface: #ffffff;
+
+    /* Main colors */
+    --primary: #6c0820;
+    --primary-hover: #8b0f2d;
+
+    /* Secondary */
+    --secondary: #f0c4cb;
+
+    /* Accent */
+    --accent: #b8445e;
+    --accent-hover: #a55166;
+
+    /* Text */
+    --text: #2b2b2b;
+    --text-light: #666666;
+
+    /* Shadow */
+    --shadow: rgba(0, 0, 0, 0.15);
+
+}
+
+.dark-theme{
+
+    --bg: #171717;
+    --card: #242424;
+
+    --background: #171717;
+    --surface: #242424;
+
+    --text: #f5f5f5;
+    --text-light: #cfcfcf;
+
+    --primary: #ff7cb5;
+    --primary-hover: #ff9ac7;
+
+    --secondary: #343434;
+
+    --accent: #ff7cb5;
+    --accent-hover: #ff98c5;
+}
+
+.dark-theme {
+
+    --bg: #171717;
+    --text: #f5f5f5;
+    --card: #242424;
+    --accent: #ff7cb5;
+
+}
+
+#theme-toggle{
+
+    background:none;
+    border:none;
+    font-size:2rem;
+    cursor:pointer;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #d5a4ca, #c998c0);
+
+    min-height: 100vh;
+    line-height: 1.6;
+
+    background: var(--bg);
+    color: var(--text);
+    transition: background .3s ease, color .3s ease;
+
+}
+
+header {
+    background: transparent;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 30px 60px;
+}
+
+nav {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 35px;
+
+    background: rgba(243, 216, 236, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    z-index: 1000;
+
+    transition: all .3s ease;
+}
+
+nav h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+
+    letter-spacing: 1px;
+}
+
+nav h1 a {
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+}
+
+nav h1 a:hover {
+    color: var(--primary-hover);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    position: relative;
+
+    transition: color .3s ease;
+}
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -4px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: width .3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-hover);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    min-height: 80vh;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+
+    color: var(--primary);
+
+    font-size: 2rem;
+}
+
+.hero-text h2 {
+
+    color: var(--primary);
+
+    font-size: 3.5rem;
+
+    margin: 10px 0;
+}
+
+.hero-text p {
+
+    margin: 25px 0;
+
+    font-size: 1.1rem;
+
+    max-width: 550px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+    animation: float 4s ease-in-out infinite;
+
+    transition: transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .22);
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    transition: all .3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .15);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+
+    color: var(--primary);
+
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.btn:hover {
+    background: var(--accent);
+}
+
+#more {
+    margin-top: 500px;
+    scroll-margin-top: 120px;
+}
+
+h1 {
+    color: var(--primary);
+}
+
+h2 {
+    color: var(--primary);
+}
+
+p {
+    color: var(--text);
+}
+
+hr {
+    border: none;
+    height: 2px;
+
+    background: var(--primary);
+
+    margin: 30px 0;
+}
+
+.container {
+
+    background: var(--surface);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+
+    transition: transform .3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.profile-picture {
+
+    width: 180px;
+    height: 180px;
+
+    display: block;
+
+    margin: 20px auto;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+
+    transition: transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.profile-picture:hover {
+
+    transform: scale(1.05);
+
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .3);
+
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    color: var(--text-light);
+    font-size: .9rem;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 900px) {
+
+    nav {
+        padding: 18px 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    nav h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text h2 {
+        font-size: 2.7rem;
+    }
+
+    .hero-text p {
+        margin: 20px auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 280px;
+    }
+
+    main {
+        padding: 130px 20px 40px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+}
+
+/*js*/
+
+nav ul li a.active {
+    color: #b0005c;
+    font-weight: 700;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.nav-controls{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+#theme-toggle,
+#language-toggle{
+
+    background:none;
+    border:none;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:var(--text);
+
+    transition:.25s;
+}
+
+#theme-toggle{
+    font-size:1.8rem;
+}
+
+#theme-toggle:hover,
+#language-toggle:hover{
+    transform:scale(1.1);
+}

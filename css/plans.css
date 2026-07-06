@@ -1,0 +1,31 @@
+:root {
+
+    /* Backgrounds */
+    --background: #f2dcdb;
+    --surface: #ffffff;
+
+    /* Main colors */
+    --primary: #6c0820;
+    --primary-hover: #8b0f2d;
+
+    /* Secondary */
+    --secondary: #f0c4cb;
+
+    /* Accent */
+    --accent: #b8445e;
+    --accent-hover: #a55166;
+
+    /* Text */
+    --text: #2b2b2b;
+    --text-light: #666666;
+
+    /* Shadow */
+    --shadow: rgba(0, 0, 0, 0.15);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

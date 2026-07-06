@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lizu's website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1><a href="../pages/index.html">Lizu</a></h1>
+
+            <ul>
+                <li><a href="../pages/about.html" data-lang="nav-about">About</a></li>
+                <li><a href="../pages/skills.html" data-lang="nav-skills">Skills</a></li>
+                <li><a href="../pages/projects.html" data-lang="nav-projects">Projects</a></li>
+                <li><a href="../pages/contact.html" data-lang="nav-contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    🌙
+                </button>
+
+                <button id="language-toggle" aria-label="Change language">
+                    HU | EN
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <h1 data-lang="hero-hi">Hi!</h1>
+
+                <h2 data-lang="hero-name">I'm Lizu.</h2>
+
+                <p data-lang="hero-text">
+                    A software engineer student, and also a professional crocheter.
+                </p>
+
+                <div class="buttons">
+                    <a href="#more" class="btn btn-outline" data-lang="hero-more">
+                        More
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img src="../images/profile.jpg" alt="Lizu">
+            </div>
+
+        </section>
+
+        <section id="more" class="about-home">
+
+            <h2 data-lang="home-title">
+                Jo cim:
+            </h2>
+
+            <p data-lang="home-text">
+                Jo szoveg
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

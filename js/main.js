@@ -167,6 +167,12 @@ const translations = {
         "music-text1": "Music has always been a huge inspiration for me. Here are some of the songs I never get tired of listening to.",
         "music-spotify": "More of my favorite songs →",
 
+
+        "back-music": "← Back to Music",
+        "music-spotify": "Listen on Spotify →",
+        "favorite-part": "Favorite lyrics:",
+        
+
     },
 
     hu: {
@@ -225,6 +231,13 @@ const translations = {
         "music-title1": "Kedvenc dalaim:",
         "music-text1": "Tudj meg többet a zenehallgatási szokásaimról.",
         "music-spotify": "Több a kedvenc dalaimból →",
+
+
+        "back-music": "← Vissza a zenékhez",
+        "music-spotify": "Hallgasd a Spotify-on →",
+        "favorite-part": "Kedvenc dalszövegrészlet:",
+        
+
 
     }
 

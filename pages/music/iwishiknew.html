@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>i wish i knew how to quit you • Lizu</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/iwishiknew.css">
 </head>
-<body>
+
+<body class="iwish-page">
+
+    <header>
+        <nav>
+            <h1>
+                <a href="../index.html">Lizu</a>
+            </h1>
+
+            <ul>
+                <li><a href="../about.html" data-lang="nav-about">About</a></li>
+                <li><a href="../skills.html" data-lang="nav-skills">Skills</a></li>
+                <li><a href="../projects.html" data-lang="nav-projects">Projects</a></li>
+                <li><a href="../contact.html" data-lang="nav-contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+                <button id="language-toggle" aria-label="Change language">HU | EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="song-page">
+
+        <section class="song-hero">
+
+            <div class="spotify-embed">
+                <iframe style="border-radius:16px"
+                    src="https://open.spotify.com/embed/track/5Lfdb0KKLWKEns27p20uYt?utm_source=generator&si=afbb660e64b24b43"
+                    width="100%" height="352" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="song-intro">
+                <p class="song-label">sombr</p>
+
+                <h1>i wish i knew how to quit you</h1>
+
+                <p class="song-description" data-lang="iwish-description">
+                    One of my favorite songs from sombr.
+                </p>
+
+                <div class="song-actions">
+                    <a href="https://open.spotify.com/" target="_blank" class="song-btn" data-lang="listen-spotify">
+                        Listen on Spotify
+                    </a>
+
+                    <a href="#song-details" class="song-btn outline" data-lang="more-song">
+                        More about the song
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="song-details" class="song-details">
+
+            <div class="details-cover">
+                <img src="../../images/music/iwishiknew.jpg" alt="i wish i knew how to quit you album cover">
+            </div>
+
+            <div class="details-info">
+
+                <h2 data-lang="about-song">
+                    About the song
+                </h2>
+
+                <div class="info-grid">
+                    <p><strong data-lang="song-label-title">Song:</strong> i wish i knew how to quit you</p>
+                    <p><strong data-lang="artist-label">Artist:</strong> sombr</p>
+                    <p><strong data-lang="album-label">Album:</strong> I Barely Know Her</p>
+                    <p><strong data-lang="released-label">Released:</strong> 2025</p>
+                    <p><strong data-lang="genre-label">Genre:</strong> Indie Pop</p>
+                </div>
+
+                <div class="lyrics-box">
+                    <h3>Favorite lyric</h3>
+
+                    <p>
+                        “I live inside a house, 
+                        without you it's not home”
+                    </p>
+                </div>
+
+
+                <a href="music.html" class="back-link" data-lang="back-music">
+                    ← Back to Music
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
     <script src="../../js/main.js"></script>
+
 </body>
+
 </html>

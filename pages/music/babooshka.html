@@ -1,11 +1,191 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Babooshka • Lizu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/babooshka.css">
 </head>
-<body>
+
+<body class="babooshka-page">
+
+    <header>
+        <nav>
+
+            <h1>
+                <a href="../index.html">Lizu</a>
+            </h1>
+
+            <ul>
+                <li>
+                    <a href="../about.html" data-lang="nav-about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../skills.html" data-lang="nav-skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../projects.html" data-lang="nav-projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="../contact.html" data-lang="nav-contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-controls">
+
+                <button id="theme-toggle" aria-label="Toggle theme">
+                    🌙
+                </button>
+
+                <button id="language-toggle" aria-label="Change language">
+                    HU | EN
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="song-page">
+
+        <section class="song-hero">
+
+            <div class="spotify-embed">
+
+                <iframe src="https://open.spotify.com/embed/track/6VpNGCU2ig4NQmsLfALdJU?utm_source=generator&si=8655bd8a2ff64849"
+                    title="Babooshka Spotify player" width="100%" height="352" frameborder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+
+            </div>
+
+            <div class="song-intro">
+
+                <p class="song-label">
+                    Kate Bush
+                </p>
+
+                <h1>
+                    Babooshka
+                </h1>
+
+                <p class="song-description" data-lang="babooshka-description">
+                    I love this song because of its meaning.
+                </p>
+                <p class="song-description" data-lang="babooshka-description">
+                    Although I like Kate Bush's music in general, this song is one of my favorites. 
+                    It tells a story about a woman who tests her husband's love and loyalty by pretending to be another woman.
+                </p>
+
+                <div class="song-actions">
+
+                    <a href="https://open.spotify.com/track/6VpNGCU2ig4NQmsLfALdJU?si=dd120933061a4c35" target="_blank"
+                        rel="noopener noreferrer" class="song-btn" data-lang="listen-spotify">
+                        Listen on Spotify
+                    </a>
+
+                    <a href="#song-details" class="song-btn outline" data-lang="more-song">
+                        More about the song
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="song-details" class="song-details">
+
+            <div class="details-cover">
+
+                <img src="../../images/music/babooshka.jpg" alt="Babooshka album cover">
+
+            </div>
+
+            <div class="details-info">
+
+                <h2 data-lang="about-song">
+                    About the song
+                </h2>
+
+                <div class="info-grid">
+
+                    <p>
+                        <strong data-lang="song-label-title">Song:</strong>
+                        Babooshka
+                    </p>
+
+                    <p>
+                        <strong data-lang="artist-label">Artist:</strong>
+                        Kate Bush
+                    </p>
+
+                    <p>
+                        <strong data-lang="album-label">Album:</strong>
+                        Never for Ever
+                    </p>
+
+                    <p>
+                        <strong data-lang="released-label">Released:</strong>
+                        1980
+                    </p>
+
+                    <p>
+                        <strong data-lang="genre-label">Genre:</strong>
+                        Art Pop
+                    </p>
+
+                </div>
+
+
+
+
+                <div class="lyrics-box">
+                    <h3>Favorite lyric</h3>
+
+                    <p>
+                        “And when he laid eyes on her
+                    </p>
+
+                    <p>
+                        He got the feeling they had met before”
+                    </p>
+
+                </div>
+
+
+                <a href="music.html" class="back-link" data-lang="back-music">
+                    ← Back to Music
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
     <script src="../../js/main.js"></script>
+
 </body>
+
 </html>

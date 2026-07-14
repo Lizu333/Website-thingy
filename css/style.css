@@ -1,64 +1,100 @@
 :root {
-
     /* Backgrounds */
-    --background: #f2dcdb;
-    --surface: #ffffff;
+    --background: #F2DCDB;
+    --background-secondary: #E8C7D3;
+
+    /* Surfaces */
+    --surface: rgba(255, 255, 255, 0.48);
+    --surface-solid: #FFFFFF;
+    --surface-hover: rgba(255, 255, 255, 0.68);
 
     /* Main colors */
-    --primary: #6c0820;
-    --primary-hover: #8b0f2d;
+    --primary: #6C0820;
+    --primary-hover: #8B0F2D;
 
-    /* Secondary */
-    --secondary: #f0c4cb;
-
-    /* Accent */
-    --accent: #b8445e;
-    --accent-hover: #a55166;
+    /* Accent colors */
+    --accent: #B8445E;
+    --accent-hover: #C95F75;
 
     /* Text */
-    --text: #2b2b2b;
+    --text: #2B2B2B;
     --text-light: #666666;
+    --text-on-primary: #FFFFFF;
 
-    /* Shadow */
+    /* Borders */
+    --border: rgba(255, 255, 255, 0.38);
+    --border-strong: rgba(108, 8, 32, 0.20);
+
+    /* Shadows */
     --shadow: rgba(0, 0, 0, 0.15);
+    --shadow-strong: rgba(0, 0, 0, 0.25);
 
+    /* Navbar */
+    --nav-background: rgba(255, 255, 255, 0.28);
+    --nav-text: #6C0820;
+
+    /* Scrollbar */
+    --scrollbar-track: #E8C7D3;
+    --scrollbar-thumb: #B8445E;
+    --scrollbar-thumb-hover: #8B0F2D;
 }
 
-.dark-theme{
+body.dark-theme {
+    /* Backgrounds */
+    --background: #1E151C;
+    --background-secondary: #222222;
 
-    --bg: #171717;
-    --card: #242424;
+    /* Surfaces */
+    --surface: rgba(105, 32, 44, 0.46);
+    --surface-solid: #69202C;
+    --surface-hover: rgba(105, 32, 44, 0.72);
 
-    --background: #171717;
-    --surface: #242424;
+    /* Main colors */
+    --primary: #fae4e6;
+    --primary-hover: #9b5159;
 
-    --text: #f5f5f5;
-    --text-light: #cfcfcf;
+    /* Accent colors */
+    --accent: #ffe6e9;
+    --accent-hover: #FAFAFA;
 
-    --primary: #ff7cb5;
-    --primary-hover: #ff9ac7;
+    /* Text */
+    --text: #FAFAFA;
+    --text-light: #ffedee;
+    --text-on-primary: #1E151C;
 
-    --secondary: #343434;
+    /* Borders */
+    --border: rgba(250, 250, 250, 0.08);
+    --border-strong: rgba(234, 123, 134, 0.38);
 
-    --accent: #ff7cb5;
-    --accent-hover: #ff98c5;
+    /* Shadows */
+    --shadow: rgba(0, 0, 0, 0.38);
+    --shadow-strong: rgba(0, 0, 0, 0.58);
+
+    /* Navbar */
+    --nav-background: rgba(30, 21, 28, 0.84);
+    --nav-text: #FAFAFA;
+
+    /* Scrollbar */
+    --scrollbar-track: #1E151C;
+    --scrollbar-thumb: #69202C;
+    --scrollbar-thumb-hover: #EA7B86;
 }
 
 .dark-theme {
 
     --bg: #171717;
-    --text: #f5f5f5;
+    --text: #d4cbc4;
     --card: #242424;
-    --accent: #ff7cb5;
+    --accent: #52154e;
 
 }
 
-#theme-toggle{
+#theme-toggle {
 
-    background:none;
-    border:none;
-    font-size:2rem;
-    cursor:pointer;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
 
 }
 
@@ -75,15 +111,22 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #d5a4ca, #c998c0);
+
+    background:
+        radial-gradient(circle at top left,
+            color-mix(in srgb, var(--accent) 10%, transparent),
+            transparent 35%),
+        linear-gradient(135deg,
+            var(--background),
+            var(--background-secondary));
+
+    color: var(--text);
 
     min-height: 100vh;
-    line-height: 1.6;
 
-    background: var(--bg);
-    color: var(--text);
-    transition: background .3s ease, color .3s ease;
-
+    transition:
+        background 0.35s ease,
+        color 0.35s ease;
 }
 
 header {
@@ -110,16 +153,13 @@ nav {
     align-items: center;
 
     padding: 18px 35px;
-
-    background: rgba(243, 216, 236, 0.65);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: var(--nav-background);
+    border: 1px solid var(--border);
+    box-shadow: 0 8px 30px var(--shadow);
     border-radius: 18px;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-
     z-index: 1000;
 
     transition: all .3s ease;
@@ -134,7 +174,7 @@ nav h1 {
 }
 
 nav h1 a {
-    color: inherit;
+    color: var(--nav-text);
     text-decoration: none;
     font: inherit;
 }
@@ -147,9 +187,14 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
-
+    color: var(--nav-text);
     margin: 0;
     padding: 0;
+}
+
+nav ul a:hover,
+nav ul a.active {
+    color: var(--primary);
 }
 
 nav li {
@@ -342,6 +387,9 @@ h2 {
 
 p {
     color: var(--text);
+    margin: 20px 0;
+    margin-top: 20px;
+    line-height: 1.6;
 }
 
 hr {
@@ -350,7 +398,7 @@ hr {
 
     background: var(--primary);
 
-    margin: 30px 0;
+    margin: 60px 0;
 }
 
 .container {
@@ -543,34 +591,82 @@ nav ul li a.active {
 }
 
 
-.nav-controls{
-    display:flex;
-    align-items:center;
-    gap:15px;
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 #theme-toggle,
-#language-toggle{
+#language-toggle {
 
-    background:none;
-    border:none;
+    background: none;
+    border: none;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    font-size:1rem;
+    font-size: 1rem;
 
-    font-weight:600;
+    font-weight: 600;
 
-    color:var(--text);
+    color: var(--text);
 
-    transition:.25s;
+    transition: .25s;
 }
 
-#theme-toggle{
-    font-size:1.8rem;
+#theme-toggle {
+    font-size: 1.8rem;
 }
 
 #theme-toggle:hover,
-#language-toggle:hover{
-    transform:scale(1.1);
+#language-toggle:hover {
+    transform: scale(1.1);
+}
+
+
+.card,
+.song-card,
+.about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 30px var(--shadow);
+    color: var(--text);
+}
+
+.card:hover,
+.song-card:hover,
+.about-card:hover {
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
+}
+
+.btn {
+    background: var(--primary);
+    color: var(--text-on-primary);
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+}
+
+#theme-toggle,
+#language-toggle {
+    color: var(--nav-text);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
 }

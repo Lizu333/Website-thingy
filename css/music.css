@@ -1,6 +1,10 @@
 :root {
 
-    /* Backgrounds */
+    /* Backgrounds */ 
+    /*eredeti:
+    --background: #f2dcdb;
+    --surface: #ffffff;*/
+
     --background: #f2dcdb;
     --surface: #ffffff;
 
@@ -180,7 +184,7 @@ nav a:hover::after {
 
 .music-left {
 
-    width: 330px;
+    width: 450px;
 
     position: sticky;
 
@@ -193,8 +197,8 @@ nav a:hover::after {
 
 .vinyl {
 
-    width: 310px;
-    height: 310px;
+    width: 420px;
+    height: 420px;
 
     border-radius: 50%;
 
@@ -238,8 +242,8 @@ nav a:hover::after {
 
 .vinyl img {
 
-    width: 105px;
-    height: 105px;
+    width: 155px;
+    height: 155px;
 
     border-radius: 50%;
 
@@ -573,3 +577,4 @@ nav a:hover::after {
 #vinyl-cover {
     transition: opacity 0.3s ease;
 }
+

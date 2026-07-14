@@ -164,7 +164,6 @@ const translations = {
 
         //music
         "music-title1": "My Favorite Songs",
-        "music-text1": "Music has always been a huge inspiration for me. Here are some of the songs I never get tired of listening to.",
         "music-spotify": "More of my favorite songs →",
 
 
@@ -229,7 +228,6 @@ const translations = {
         "contact-title": "Egyéb oldalaim és elérhetőségeim:",
 
         "music-title1": "Kedvenc dalaim:",
-        "music-text1": "Tudj meg többet a zenehallgatási szokásaimról.",
         "music-spotify": "Több a kedvenc dalaimból →",
 
 

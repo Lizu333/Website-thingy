@@ -7,10 +7,10 @@ html {
     --song-bg: #F7F2EA;
     --song-bg-light: #EFE5D7;
 
-    --song-primary: #57504b;
-    --song-secondary: #887b6c;
+    --song-primary: #211c17;
+    --song-secondary: #cbb8a3;
 
-    --song-card: rgba(255,255,255,.60);
+    --song-card: rgba(56, 40, 40, 0.668);
 
     --song-shadow: rgba(139,94,60,.18);
 

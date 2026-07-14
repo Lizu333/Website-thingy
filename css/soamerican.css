@@ -4,13 +4,13 @@ html{
 
 .soamerican-page{
 
-    --song-bg:#FFF7F3;
-    --song-bg-light:#FDE9E5;
+    --song-bg:#de9bf4;
+    --song-bg-light:#eed1f7cc;
 
     --song-primary:#210B2C;
-    --song-secondary:#BC96C6;
+    --song-secondary:#4d3453;
 
-    --song-card:rgba(255,255,255,.60);
+    --song-card:rgba(73, 9, 86, 0.421);
 
     --song-shadow:rgba(178,58,72,.18);
 

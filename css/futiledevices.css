@@ -6,10 +6,10 @@ html {
     --song-bg: #eef1f3;
     --song-bg-light: #d9e2e7;
 
-    --song-primary: #39729b;
-    --song-secondary: #7c8fa1;
+    --song-primary: #1a364a;
+    --song-secondary: #8bb5dc;
 
-    --song-card: rgba(255, 255, 255, .58);
+    --song-card: rgb(60, 97, 139);
     --song-shadow: rgba(61, 79, 92, .18);
 
     background: linear-gradient(

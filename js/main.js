@@ -170,7 +170,40 @@ const translations = {
         "back-music": "← Back to Music",
         "music-spotify": "Listen on Spotify →",
         "favorite-part": "Favorite lyrics:",
-        
+
+        "listen-spotify": "Listen on Spotify",
+        "more-song": "More about the song",
+
+        "about-song": "About the song",
+
+        "song-label-title": "Song:",
+        "artist-label": "Artist:",
+        "album-label": "Album:",
+        "released-label": "Released:",
+        "genre-label": "Genre:",
+
+        "back-music": "← Back to Music",
+
+        "teenagedream-description": "My favorite song from Olivia Rodrigo’s album GUTS.",
+
+        "iwishiknew-description": "One of my favorite songs from sombr.",
+
+        "uandme-description": " My favorite song from Olivia Rodrigo's album you seem pretty sad for a girl so in love.",
+
+        "soamerican-description": " My favorite song from Olivia Rodrigo's album GUTS (spilled).",
+
+        "futile-description": "This song is just too special to me.",
+
+        "landslide-description": "One of my favorite songs from Fleetwood Mac.",
+
+        "eventually-description": "I think that this is just another level of music.",
+
+        "babooshka-description": " Although I like Kate Bush's music in general, this song is one of my favorites. It tells a story about a woman who tests her husband's love and loyalty by pretending to be another woman.",
+
+        "taking-description": "TV Girl means a lot to me all over, and if I had to choose one song of theirs, it would be this one. My favorite album from them is Summer's Over.",
+
+        "purplerain-description": "This song is sad but true at the same time."
+
 
     },
 
@@ -230,11 +263,31 @@ const translations = {
         "music-title1": "Kedvenc dalaim:",
         "music-spotify": "Több a kedvenc dalaimból →",
 
-
+        "about-song": "Többet a dalról",
         "back-music": "← Vissza a zenékhez",
         "music-spotify": "Hallgasd a Spotify-on →",
         "favorite-part": "Kedvenc dalszövegrészlet:",
-        
+
+        "teenagedream-description": "A kedvenc dalom Olivia Rodrigo GUTS című albumáról.",
+
+        "iwishiknew-description": "Az egyik kedvenc dalom sombr-től.",
+
+        "uandme-description": "A kedvenc dalom Olivia Rodrigo you seem pretty sad for a girl so in love című albumáról.",
+
+        "soamerican-description": "A kedvenc dalom Olivia Rodrigo GUTS (spilled) című albumáról.",
+
+        "futile-description": "Nagyon sokat jelent nekem ez a dal.",
+
+        "landslide-description": "Az egyik kedvenc dalom a Fleetwood Mac-től.",
+
+        "eventually-description": "Nagyon szeretem azt a zenei műfajt amit ez a dal is képvisel.",
+
+        "babooshka-description": "Bár Kate Bush dalait is kedvelem, ez az egyik kedvencem tőle. A dal történetét egy nő meséli el, aki próbára teszi a férje szerelmét és hűségét úgy, hogy egy másik nőnek adja ki magát.",
+
+        "taking-description": "A TV Girl nagyon sokat jelent számomra, és ha kedvenc dalt kellene választanom, akkor ez lenne az. A kedvenc albumom tőlük a Summer's Over.",
+
+        "purplerain-description": "Ez a dal egyszerre szomorú de közben mégis nagyon igaz üzenetet szeretne közvetíteni."
+
 
 
     }
@@ -284,4 +337,53 @@ if (languageButton) {
     });
 
 }
+
+
+//fullscreen
+
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+const closeMenuButton = document.getElementById("close-menu");
+
+function openMobileMenu() {
+    if (!mobileMenu || !menuToggle) return;
+
+    mobileMenu.classList.add("open");
+    document.body.classList.add("menu-open");
+
+    menuToggle.setAttribute("aria-expanded", "true");
+}
+
+function closeMobileMenu() {
+    if (!mobileMenu || !menuToggle) return;
+
+    mobileMenu.classList.remove("open");
+    document.body.classList.remove("menu-open");
+
+    menuToggle.setAttribute("aria-expanded", "false");
+}
+
+if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", openMobileMenu);
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", closeMobileMenu);
+    });
+}
+
+if (closeMenuButton) {
+    closeMenuButton.addEventListener("click", closeMobileMenu);
+}
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeMobileMenu();
+    }
+});
+
+mobileMenu?.addEventListener("click", event => {
+    if (event.target === mobileMenu) {
+        closeMobileMenu();
+    }
+});
 

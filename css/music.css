@@ -69,51 +69,60 @@ header {
 }
 
 nav {
-
     position: fixed;
-
-    top: 20px;
+    top: 15px;
     left: 50%;
-
     transform: translateX(-50%);
 
-    width: 94%;
+    width: calc(100% - 40px);
+    max-width: 1200px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 22px 45px;
+    padding: 18px 35px;
 
-    background: rgba(255, 255, 255, .25);
+    background: var(--nav-background);
+    border: 1px solid var(--border);
 
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
-    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 8px 30px var(--shadow);
 
-    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 18px;
 
-    border-radius: 22px;
+    z-index: 1000;
 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, .12);
-
-    z-index: 999;
-
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
 }
 
 nav h1 {
+    margin: 0;
 
-    font-size: 2.3rem;
-
+    font-size: 2rem;
     font-weight: 700;
 
+    letter-spacing: 1px;
 }
 
 nav h1 a {
 
-    color: var(--primary);
+    color: var(--nav-text);
 
     text-decoration: none;
+
+    transition: color .25s ease;
+
+}
+
+nav h1 a:hover {
+
+    color: var(--primary-hover);
 
 }
 
@@ -121,55 +130,57 @@ nav ul {
 
     display: flex;
 
-    gap: 40px;
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
 
     list-style: none;
 
 }
 
-nav a {
+nav li {
+
+    list-style: none;
+
+}
+
+nav ul li a {
+    display: inline-block;
+
+    color: var(--nav-text);
 
     text-decoration: none;
-
-    color: var(--primary);
-
     font-weight: 600;
 
-    position: relative;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
 
-    transition: .3s;
+nav ul li a:hover {
+
+    color: var(--primary-hover);
+
+    transform: translateY(-2px);
 
 }
 
-nav a::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    bottom: -5px;
-
-    width: 0;
-
-    height: 2px;
-
-    background: var(--primary);
-
-    transition: .3s;
-
-}
-
-nav a:hover {
+nav ul li a.active {
 
     color: var(--primary-hover);
 
 }
 
-nav a:hover::after {
+nav ul li a:hover {
+    color: var(--primary-hover) !important;
+    transform: translateY(-2px);
+}
 
-    width: 100%;
-
+nav ul li a.active {
+    color: var(--primary-hover) !important;
 }
 
 .music-page {
@@ -578,3 +589,106 @@ nav a:hover::after {
     transition: opacity 0.3s ease;
 }
 
+
+nav ul li a {
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+nav ul li a:hover {
+
+    color: var(--accent);
+
+    transform: translateY(-2px);
+
+}
+
+
+/*mivel lusta voltam osszekotni mindent a style.css-be ezert most egyenkent szepen vegigmegyek css-enkent a mobilnezet beallitasaival*/
+
+@media (max-width: 900px) {
+
+    .music-page {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+    }
+
+    .music-left {
+        position: static;
+
+        width: 100%;
+    }
+
+    .vinyl {
+        width: min(360px, 78vw);
+        height: min(360px, 78vw);
+    }
+
+    .vinyl img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .music-right {
+        width: 100%;
+    }
+
+    .music-right > h1,
+    .music-right > p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .vinyl {
+        width: min(280px, 76vw);
+        height: min(280px, 76vw);
+    }
+
+    .vinyl img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .music-right h1 {
+        font-size: 2.2rem;
+    }
+
+    .song-list {
+        gap: 14px;
+    }
+
+    .song-card {
+        gap: 14px;
+
+        padding: 12px 14px;
+
+        border-radius: 17px;
+    }
+
+    .song-card img {
+        width: 55px;
+        height: 55px;
+
+        border-radius: 12px;
+    }
+
+    .song-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .song-info p {
+        font-size: 0.8rem;
+    }
+
+    .song-card span {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,694 @@
+:root {
+
+    /* Backgrounds */ 
+    /*eredeti:
+    --background: #f2dcdb;
+    --surface: #ffffff;*/
+
+    --background: #f2dcdb;
+    --surface: #ffffff;
+
+    /* Main colors */
+    --primary: #6c0820;
+    --primary-hover: #8b0f2d;
+
+    /* Secondary */
+    --secondary: #f0c4cb;
+
+    /* Accent */
+    --accent: #b8445e;
+    --accent-hover: #a55166;
+
+    /* Text */
+    --text: #2b2b2b;
+    --text-light: #666666;
+
+    /* Shadow */
+    --shadow: rgba(0, 0, 0, .15);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: linear-gradient(135deg,
+            var(--background),
+            #efd0d5);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+}
+
+main {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 150px 40px 80px;
+
+}
+
+header {
+
+    background: transparent;
+
+}
+
+nav {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 40px);
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 35px;
+
+    background: var(--nav-background);
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow: 0 8px 30px var(--shadow);
+
+    border-radius: 18px;
+
+    z-index: 1000;
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+nav h1 {
+    margin: 0;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+nav h1 a {
+
+    color: var(--nav-text);
+
+    text-decoration: none;
+
+    transition: color .25s ease;
+
+}
+
+nav h1 a:hover {
+
+    color: var(--primary-hover);
+
+}
+
+nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+}
+
+nav li {
+
+    list-style: none;
+
+}
+
+nav ul li a {
+    display: inline-block;
+
+    color: var(--nav-text);
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav ul li a:hover {
+
+    color: var(--primary-hover);
+
+    transform: translateY(-2px);
+
+}
+
+nav ul li a.active {
+
+    color: var(--primary-hover);
+
+}
+
+nav ul li a:hover {
+    color: var(--primary-hover) !important;
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    color: var(--primary-hover) !important;
+}
+
+.music-page {
+
+    display: flex;
+
+    gap: 80px;
+
+    align-items: flex-start;
+
+}
+
+.music-left {
+
+    width: 450px;
+
+    position: sticky;
+
+    top: 150px;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.vinyl {
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    background:
+        repeating-radial-gradient(circle,
+
+            #111111 0px,
+            #111111 5px,
+
+            #181818 6px,
+            #111111 8px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .35);
+
+    animation: spin 10s linear infinite;
+    transition: transform 0.3s ease;
+
+}
+
+.vinyl:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 28px 60px rgba(0, 0, 0, .45);
+
+    animation:
+        float 4s ease-in-out infinite,
+        spin 3s linear infinite;
+
+}
+
+.vinyl img {
+
+    width: 155px;
+    height: 155px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 8px solid #dedede;
+
+    z-index: 2;
+
+}
+
+.vinyl::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    z-index: 3;
+
+}
+
+.vinyl::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(135deg,
+
+            rgba(255, 255, 255, .18),
+
+            transparent 35%,
+
+            transparent 70%,
+
+            rgba(255, 255, 255, .08));
+
+}
+
+.music-right {
+
+    flex: 1;
+
+}
+
+.music-right h1 {
+
+    font-size: 3rem;
+
+    color: var(--primary);
+
+    margin-bottom: 10px;
+
+}
+
+.music-right p {
+
+    color: var(--text-light);
+
+    margin-bottom: 40px;
+
+    font-size: 1.05rem;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes spin {
+
+    from {
+
+        rotate: 0deg;
+
+    }
+
+    to {
+
+        rotate: 360deg;
+
+    }
+
+}
+
+.song-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+}
+
+.song-card {
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 18px 22px;
+
+    background: rgba(255, 255, 255, .45);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255, 255, 255, .4);
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: .35s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.song-card:hover {
+
+    transform: translateX(14px);
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+
+}
+
+.song-card img {
+
+    width: 72px;
+    height: 72px;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+
+    transition: .35s;
+
+}
+
+.song-card:hover img {
+
+    transform: scale(1.12);
+
+}
+
+.song-info {
+
+    flex: 1;
+
+}
+
+.song-info h3 {
+
+    color: var(--primary);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 5px;
+
+}
+
+.song-info p {
+
+    margin: 0;
+
+    color: var(--text-light);
+
+}
+
+.song-card span {
+
+    font-size: 28px;
+
+    color: var(--primary);
+
+    transition: .35s;
+
+}
+
+.song-card:hover span {
+
+    transform: translateX(8px);
+
+}
+
+.spotify {
+
+    text-align: center;
+
+    margin-top: 60px;
+
+}
+
+.spotify a {
+
+    display: inline-block;
+
+    padding: 16px 34px;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: var(--primary);
+
+    font-weight: 600;
+
+    transition: .35s;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .18);
+
+}
+
+.spotify a:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-5px);
+
+}
+
+@media(max-width:1000px) {
+
+    .music-page {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .music-left {
+
+        position: static;
+
+    }
+
+    .music-right {
+
+        width: 100%;
+
+    }
+
+}
+
+@media(max-width:700px) {
+
+    nav {
+
+        padding: 18px 25px;
+
+    }
+
+    nav ul {
+
+        gap: 18px;
+
+    }
+
+    .vinyl {
+
+        width: 240px;
+        height: 240px;
+
+    }
+
+    .song-card {
+
+        padding: 15px;
+
+    }
+
+    .song-card img {
+
+        width: 60px;
+        height: 60px;
+
+    }
+
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#vinyl-cover {
+    transition: opacity 0.3s ease;
+}
+
+
+nav ul li a {
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+
+}
+
+nav ul li a:hover {
+
+    color: var(--accent);
+
+    transform: translateY(-2px);
+
+}
+
+
+/*mivel lusta voltam osszekotni mindent a style.css-be ezert most egyenkent szepen vegigmegyek css-enkent a mobilnezet beallitasaival*/
+
+@media (max-width: 900px) {
+
+    .music-page {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+    }
+
+    .music-left {
+        position: static;
+
+        width: 100%;
+    }
+
+    .vinyl {
+        width: min(360px, 78vw);
+        height: min(360px, 78vw);
+    }
+
+    .vinyl img {
+        width: 115px;
+        height: 115px;
+    }
+
+    .music-right {
+        width: 100%;
+    }
+
+    .music-right > h1,
+    .music-right > p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .vinyl {
+        width: min(280px, 76vw);
+        height: min(280px, 76vw);
+    }
+
+    .vinyl img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .music-right h1 {
+        font-size: 2.2rem;
+    }
+
+    .song-list {
+        gap: 14px;
+    }
+
+    .song-card {
+        gap: 14px;
+
+        padding: 12px 14px;
+
+        border-radius: 17px;
+    }
+
+    .song-card img {
+        width: 55px;
+        height: 55px;
+
+        border-radius: 12px;
+    }
+
+    .song-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .song-info p {
+        font-size: 0.8rem;
+    }
+
+    .song-card span {
+        font-size: 20px;
+    }
+}

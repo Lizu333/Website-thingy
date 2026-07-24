@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Lizu oldala">
+
+    <title>Lizu's website</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!--HEADER, NAV-->
+
+    <header class="site-header">
+
+        <nav class="navbar container" aria-label="Fő navigáció">
+
+            <a class="navbar-logo" href="index.html" aria-label="Lizu főoldal">
+                ♡
+            </a>
+
+            <ul class="desktop-nav">
+
+                <li>
+                    <a href="index.html" data-lang="nav-home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html" data-lang="nav-about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="skills.html" data-lang="nav-skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html" data-lang="nav-projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" data-lang="nav-contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="navbar-actions">
+
+                <!--SEARCH-->
+
+                <div class="search-wrapper" id="search-wrapper">
+
+                    <input type="search" id="site-search" class="site-search" placeholder="Search..."
+                        aria-label="Keresés az oldalon" autocomplete="off">
+
+                    <button type="button" id="search-toggle" class="search-toggle" aria-label="Kereső megnyitása"
+                        aria-expanded="false">
+
+                        <svg aria-hidden="true" viewBox="0 0 24 24">
+
+                            <circle cx="11" cy="11" r="7">
+                            </circle>
+
+                            <path d="m20 20-4-4"></path>
+
+                        </svg>
+
+                    </button>
+
+                    <div id="search-results" class="search-results" aria-live="polite">
+                    </div>
+
+                </div>
+
+
+                <!--THEME-->
+
+                <button type="button" id="theme-toggle" class="icon-button" aria-label="Sötét mód bekapcsolása">
+
+                    <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24">
+
+                        <path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2Z">
+                        </path>
+
+                    </svg>
+
+                    <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24">
+
+                        <circle cx="12" cy="12" r="4">
+                        </circle>
+
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.42 1.42"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.42"></path>
+
+                    </svg>
+
+                </button>
+
+
+                <!--LANGUAGE-->
+
+                <button type="button" id="language-toggle" class="language-toggle" aria-label="Nyelv megváltoztatása">
+
+                    HU | EN
+
+                </button>
+
+
+                <!--HAMBURGER-->
+
+                <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Mobilmenü megnyitása"
+                    aria-expanded="false" aria-controls="mobile-menu">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!--MOBILEMENU-->
+
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+
+        <div class="mobile-menu-panel">
+
+            <button type="button" id="menu-close" class="menu-close icon-button" aria-label="Mobilmenü bezárása">
+
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+
+                </svg>
+
+            </button>
+
+            <nav class="mobile-navigation" aria-label="Mobil navigáció">
+
+                <a href="index.html" data-lang="nav-home">
+                    Home
+                </a>
+
+                <a href="about.html" data-lang="nav-about">
+                    About
+                </a>
+
+                <a href="skills.html" data-lang="nav-skills">
+                    Skills
+                </a>
+
+                <a href="projects.html" data-lang="nav-projects">
+                    Projects
+                </a>
+
+                <a href="contact.html" data-lang="nav-contact">
+                    Contact
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <!--MAIN-->
+
+    <main>
+
+        <!--HERO-->
+
+        <section class="home-hero">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <h1 data-lang="hero-title">
+                        Hi,
+                        I'm Lizu!
+                    </h1>
+
+                    <p class="hero-description" data-lang="hero-description">
+
+                        I enjoy coding, building softwares,
+                        creating websites and crocheting.
+
+                    </p>
+
+                    <div class="hero-actions">
+
+                        <a href="about.html" class="btn" data-lang="hero-about-button">
+                            About Me
+                        </a>
+
+                        <a href="projects.html" class="btn btn-outline" data-lang="hero-projects-button">
+                            My Projects
+                        </a>
+
+                    </div>
+
+                    <div class="interest-badges" aria-label="Érdeklődési körök">
+
+                        <span class="interest-badge">
+
+                            <svg class="interest-icon" aria-hidden="true" viewBox="0 0 24 24">
+
+                                <rect x="3" y="4" width="18" height="13" rx="2">
+                                </rect>
+
+                                <path d="M8 21h8"></path>
+                                <path d="M12 17v4"></path>
+
+                            </svg>
+
+                            <span data-lang="badge-programming">
+                                Programming
+                            </span>
+
+                        </span>
+
+                        <span class="interest-badge">
+
+                            <svg class="interest-icon" aria-hidden="true" viewBox="0 0 24 24">
+
+                                <circle cx="9" cy="10" r="5"></circle>
+                                <circle cx="15" cy="14" r="5"></circle>
+
+                                <path d="M4 6 2 3"></path>
+                                <path d="M20 18 22 21"></path>
+                                <path d="M7 6 11 14"></path>
+                                <path d="M13 10 17 18"></path>
+
+                            </svg>
+
+                            <span data-lang="badge-crochet">
+                                Crocheting
+                            </span>
+
+                        </span>
+
+                        <span class="interest-badge">
+
+                            <svg class="interest-icon" aria-hidden="true" viewBox="0 0 24 24">
+
+                                <path d="M9 18V5l10-2v13"></path>
+                                <circle cx="6" cy="18" r="3"></circle>
+                                <circle cx="16" cy="16" r="3"></circle>
+
+                            </svg>
+
+                            <span data-lang="badge-music">
+                                Music
+                            </span>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-visual">
+
+                    <div class="hero-image-wrapper">
+
+                        <div class="hero-image-glow"></div>
+
+                        <img class="hero-image" src="../images/profile.jpg" alt="profilkép">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--QUICK ABOUT-->
+
+        <section class="section home-about">
+
+            <div class="container">
+
+                <article class="home-feature glass">
+
+                    <div class="home-feature-content">
+
+                        <p class="section-label" data-lang="quick-about-label">
+                            About Me
+                        </p>
+
+                        <h2 data-lang="quick-about-title">
+                            A little more about me
+                        </h2>
+
+                        <p data-lang="quick-about-text">
+
+                            My name is Lilla, although my friends usually
+                            call me Liza or Lizu. I am currently studying
+                            software engineering in high school.
+
+                        </p>
+
+                        <a href="about.html" class="text-link" data-lang="read-more">
+                            Read more →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!--FEATURED PROJECT-->
+
+        <section class="section featured-project">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label" data-lang="featured-project-label">
+                        Featured Project
+                    </p>
+
+                    <h2 data-lang="featured-project-title">
+                        Something I am building
+                    </h2>
+
+                </div>
+
+                <article class="project-preview glass">
+
+                    <div class="project-preview-icon" aria-hidden="true">
+                        ♟
+                    </div>
+
+                    <div class="project-preview-content">
+
+                        <h3>LizuChess</h3>
+
+                        <p data-lang="featured-project-description">
+
+                            A chess mini game written in C++ using SFML,
+                            with a separate game engine and graphical interface.
+
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>C++</span>
+                            <span>SFML</span>
+                            <span>CMake</span>
+
+                        </div>
+
+                        <a href="projects.html" class="btn btn-outline" data-lang="view-projects">
+                            View projects
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!--LATEST MUSIC-->
+
+        <section class="section latest-music">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label" data-lang="latest-music-label">
+                        Latest Music
+                    </p>
+
+                    <h2 data-lang="latest-music-title">
+                        A few of my favorite songs
+                    </h2>
+
+                </div>
+
+                <div class="music-preview-grid">
+
+                    <a href="music/uandme.html" class="music-preview-card card">
+
+                        <img src="../images/music/uandme.jpg" alt="uandme album cover">
+
+                        <div>
+                            <h3>u+me=&lt3</h3>
+                            <p>Olivia Rodrigo</p>
+                        </div>
+
+                    </a>
+
+                    <a href="music/eventually.html" class="music-preview-card card">
+
+                        <img src="../images/music/eventually.jpg" alt="Eventually album cover">
+
+                        <div>
+                            <h3>Eventually</h3>
+                            <p>Tame Impala</p>
+                        </div>
+
+                    </a>
+
+                    <a href="music/teenagedream.html" class="music-preview-card card">
+
+                        <img src="../images/music/teenagedream.jpg" alt="teenage dream album cover">
+
+                        <div>
+                            <h3>teenage dream</h3>
+                            <p>Olivia Rodrigo</p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+                <div class="section-action">
+
+                    <a href="music/music.html" class="btn btn-outline" data-lang="view-all-music">
+                        View all music
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!--FOOTER-->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <p>
+                © 2026 Lilla Kecskes
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
